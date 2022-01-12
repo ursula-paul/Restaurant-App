@@ -1,0 +1,49 @@
+{
+  "name": "week-9-task-pod-a-ursula-paul",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon dist/server.js",
+    "build": "tsc -w",
+    "start:prod": "nodemon dist/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "env": "^0.0.2",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb-memory-server": "^8.1.0",
+    "mongoose": "^6.1.5",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.15",
+    "promisify": "^0.0.3",
+    "supertest": "^6.2.1",
+    "ts-jest": "^27.1.2",
+    "validator": "^13.7.0"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/decadevs/week-9-task-pod-a-ursula-paul.git",
+  "author": "ursula-paul <ursula.paul@decagon.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.13",
+    "@types/http-errors": "^1.8.1",
+    "@types/jest": "^27.4.0",
+    "@types/jsonwebtoken": "^8.5.6",
+    "@types/morgan": "^1.9.3",
+    "@types/supertest": "^2.0.11",
+    "@types/validator": "^13.7.1",
+    "jest": "^27.4.7",
+    "joi": "^17.5.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
+  }
+}
