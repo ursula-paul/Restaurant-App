@@ -21,7 +21,6 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
-    "mongodb-memory-server": "^8.1.0",
     "mongoose": "^6.1.5",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15",
@@ -47,6 +46,7 @@
     "@types/supertest": "^2.0.11",
     "@types/validator": "^13.7.1",
     "jest": "^27.4.7",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "mongodb-memory-server": "^8.1.0"
   }
 }
