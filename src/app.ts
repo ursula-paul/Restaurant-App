@@ -4,20 +4,23 @@ import express, { Response, Request, NextFunction } from 'express';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
-
+import indexroute from './routes/index';
 import recipeRouter from './routes/recipeRouter';
 import usersRouter from './routes/usersRouter';
 import { mongoConnect, mongoMockConnect } from './db/db';
 import dotenv from 'dotenv';
 import { MongoMemoryServer } from 'mongodb-memory-server';
+import ejs from 'ejs';
+import path from 'path';
 
 dotenv.config();
 
 const app = express();
 
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+// app.set('views', path.join(`/../${__dirname}`, 'views'));
+
+// app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -60,6 +63,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 // mongoMockConnect();
 
+app.use('/', indexroute);
 app.use('/api/v1/recipes', recipeRouter);
 app.use('/users', usersRouter);
 
