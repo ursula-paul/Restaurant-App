@@ -81,20 +81,6 @@ export const signup = async (
       status: 'fail',
       message: 'error creating new user',
     });
-
-    // newUser
-    //   .save()
-    //   .then((savedUser) =>
-    //   .catch((err) => {
-    //     console.log('user not saved', err);
-    //     res.status(500).json({ status: 'fail', message: 'please try again' });
-    //   });
-
-    // const newUser = await User.create({
-    //   fullname: req.body.fullname,
-    //   email: req.body.email,
-    //   password: req.body.password,
-    // });
   } catch (err) {
     console.log(err);
 
