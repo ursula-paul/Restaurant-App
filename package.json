@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon dist/server.js",
-    "build": "tsc -w",
-    "start:prod": "nodemon dist/server.js",
+    "build": "tsc",
+    "dev": "nodemon dist/server.js",
     "test": "jest",
     "test:w": "jest --watch"
   },
