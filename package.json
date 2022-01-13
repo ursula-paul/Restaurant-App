@@ -28,7 +28,9 @@
     "promisify": "^0.0.3",
     "supertest": "^6.2.1",
     "ts-jest": "^27.1.2",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "typescript": "^4.5.4",
+    "joi": "^17.5.0"
   },
   "main": "index.js",
   "repository": "https://github.com/decadevs/week-9-task-pod-a-ursula-paul.git",
@@ -45,8 +47,6 @@
     "@types/supertest": "^2.0.11",
     "@types/validator": "^13.7.1",
     "jest": "^27.4.7",
-    "joi": "^17.5.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.4"
+    "prettier": "^2.5.1"
   }
 }
