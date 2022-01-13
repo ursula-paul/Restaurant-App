@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon dist/server.js",
+    "start": "node bin/www",
     "build": "tsc",
     "dev": "nodemon dist/server.js",
     "test": "jest",
