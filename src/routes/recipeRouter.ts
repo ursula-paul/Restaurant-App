@@ -11,7 +11,10 @@ import { protectRoute } from '../controller/authController';
 const router = express.Router();
 
 /* GET home page. */
-router.route('/').get(protectRoute, getAllRecipes).post(createRecipe);
+router
+  .route('/')
+  .get(protectRoute, getAllRecipes)
+  .post(protectRoute, createRecipe);
 
 router
   .route('/:id')

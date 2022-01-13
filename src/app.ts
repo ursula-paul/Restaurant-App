@@ -3,10 +3,15 @@ import express, { Response, Request, NextFunction } from 'express';
 // import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import mongoose from 'mongoose';
 
 import recipeRouter from './routes/recipeRouter';
 import usersRouter from './routes/usersRouter';
 import { mongoConnect, mongoMockConnect } from './db/db';
+import dotenv from 'dotenv';
+import { MongoMemoryServer } from 'mongodb-memory-server';
+
+dotenv.config();
 
 const app = express();
 
@@ -43,9 +48,17 @@ app.use(function (
 
 if (process.env.NODE_ENV === 'test') {
   mongoMockConnect();
+  // MongoMemoryServer.create().then((mongo) => {
+  //   const uri = mongo.getUri();
+
+  //   mongoose.connect(uri).then(() => {
+  //     console.log(`Mock DB connected`);
+  //   });
+  // });
 } else {
   mongoConnect();
 }
+// mongoMockConnect();
 
 app.use('/api/v1/recipes', recipeRouter);
 app.use('/users', usersRouter);

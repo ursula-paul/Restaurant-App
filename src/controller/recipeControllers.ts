@@ -24,6 +24,7 @@ export const getAllRecipes = async (
 
   res.status(200).json({
     status: 'success',
+    results: recipes.length,
     data: recipes,
   });
 };
@@ -70,7 +71,7 @@ export const getRecipeById = async (
 
     // const foundId = await Recipe.findOneAndDelete()
 
-    return res.status(201).json({
+    return res.status(200).json({
       status: 'success',
       data: recipe,
     });
@@ -95,7 +96,7 @@ export const deleteRecipeById = async (
     const id = req.params.id;
     const deleteRecipe = await Recipe.findByIdAndDelete(id);
 
-    return res.status(201).json({
+    return res.status(204).json({
       status: 'success',
       data: 'Deleted successfully',
     });

@@ -73,9 +73,14 @@ export const signup = async (
       password: req.body.password,
     });
 
-    console.log(newUser, '***');
+    // console.log(newUser, '***');
 
-    createSendToken(newUser, 201, req, res);
+    // createSendToken(newUser, 201, req, res);
+
+    res.status(201).json({
+      status: 'fail',
+      message: 'error creating new user',
+    });
 
     // newUser
     //   .save()

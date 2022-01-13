@@ -6,7 +6,8 @@
     "start": "nodemon dist/server.js",
     "build": "tsc -w",
     "start:prod": "nodemon dist/server.js",
-    "test": "jest"
+    "test": "jest",
+    "test:w": "jest --watch"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
